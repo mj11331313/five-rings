@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>五环</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 10px solid;
+            border-radius: 50%;
+            float: left;
+            margin-right: 5px;
+            position: absolute;
+        }
+        [class]::after{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            border: 10px solid;
+            border-radius: 50%;
+        }
+        .blue,.blue::after{
+            border-color: blue;
+            top: 0;
+            left: 0;
+        }
+        .blue::after{
+            content: "";
+            z-index: 1;
+            border-color: blue;
+            border-bottom-color: transparent;
+            top: -10px;
+            left: -10px;
+        }
+        .black,.black::after{
+            top: 0;
+            left: 230px;
+        }
+        .black::after{
+            content: "";
+            z-index: 1;
+            border-left-color: transparent;
+            top: -10px;
+            left: -10px;
+        }
+        .red,.red::after{
+            border-color: red;
+            top: 0;
+            left: 460px;
+        }
+        .red::after{
+            content: "";
+            z-index: 1;
+            border-color: red;
+            border-left-color: transparent;
+            top: -10px;
+            left: -10px;
+        }
+        .yellow,.yellow::after{
+            border-color: yellow;
+            top: 115px;
+            left: 115px;
+        }
+        .yellow::after{
+            content: "";
+            border-color: yellow;
+            top: -10px;
+            left: -10px;
+        }
+        .green,.green::after{
+            border-color: green;
+            top: 115px;
+            left: 345px;
+        }
+        .green::after{
+            content: "";
+            z-index: 2;
+            border-color:green;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            top: -10px;
+            left: -10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="blue"></div>
+    <div class="black"></div>
+    <div class="red"></div>
+    <div class="yellow"></div>
+    <div class="green"></div>
+</body>
+</html>
